@@ -15,3 +15,16 @@ console.log(job.title);
 // Performing Operations
 let adultYears = myNumber - 18;
 console.log(adultYears);
+
+// Functions
+// function calculateAdultYears(age) {
+//   return age - 18;
+// }
+
+// const calculateAdultYears = function (age) {
+//   return age - 18;
+// };
+
+const calculateAdultYears = (age) => age - 18;
+
+console.log(calculateAdultYears(42));
