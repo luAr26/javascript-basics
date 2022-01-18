@@ -35,3 +35,13 @@ console.log(course.goals[1]);
 const getGoal = (identifier, goalsList) => goalsList[identifier];
 
 console.log(`My goals is to ${getGoal(2, course.goals)}`);
+
+// Methods
+const person = {
+  name: "Max",
+  greet() {
+    console.log(`Hello, my name is ${this.name}!`);
+  },
+};
+
+person.greet();
