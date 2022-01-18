@@ -52,3 +52,10 @@ console.log(10 - 4);
 console.log(10 * 4);
 console.log(10 / 4);
 console.log(10 % 4);
+
+// String operations & methods
+console.log("Max " + "Schwarzmuller");
+
+const userName = "Max";
+console.log(userName.length);
+console.log(userName.toUpperCase());
