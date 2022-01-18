@@ -59,3 +59,7 @@ console.log("Max " + "Schwarzmuller");
 const userName = "Max";
 console.log(userName.length);
 console.log(userName.toUpperCase());
+
+// Basic array operations
+const hobbies = ["sports", "cooking"];
+console.log(hobbies.length);
