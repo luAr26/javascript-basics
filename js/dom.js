@@ -60,3 +60,7 @@ const containerEl = thirdP.parentElement;
 // console.dir(secondP);
 // console.dir(thirdP);
 containerEl.insertBefore(thirdP, secondP);
+
+// innerHTML
+console.dir(secondP.innerHTML);
+secondP.innerHTML = `Hi! this is <strong>important</strong>! Follow <a href="https://github.com/" target="_blank">this link</a>.`;
