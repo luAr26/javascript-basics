@@ -46,3 +46,10 @@ console.dir(parentElement);
 
 // 3. Insert the new element
 parentElement.append(newAnchorEl);
+
+// Remove elements
+// 1. Select the element to be removed
+const firstH1Element = document.querySelector("h1");
+// 2. Remove it!
+// firstH1Element.remove();
+firstH1Element.parentElement.removeChild(firstH1Element);
