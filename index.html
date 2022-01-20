@@ -11,6 +11,36 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .container.app {
+        background-color: rgb(210, 219, 155);
+        padding: 1.6rem;
+        border-radius: 10px;
+      }
+
+      input[type="text"] {
+        display: block;
+        font: inherit;
+        line-height: 1;
+        width: 100%;
+        border-radius: 3px;
+        padding: 1.6rem;
+      }
+
+      #product-name-length {
+        font-weight: 700;
+      }
+
+      button[type="submit"] {
+        border: none;
+        padding: 0.8rem 1.6rem;
+        background-color: rgb(253, 155, 64);
+        color: #fff;
+        font-weight: 700;
+        font-size: 2.4rem;
+        border-radius: 10px;
+      }
+    </style>
     <title>JavaScript Basics</title>
   </head>
   <body>
@@ -34,8 +64,19 @@
         </p>
       </div>
       <div class="container app">
-        <p>Click me!</p>
-        <input type="text" />
+        <form action="/" method="GET">
+          <label for="product-name">Product name</label>
+          <input
+            type="text"
+            name="productName"
+            id="product-name"
+            maxlength="30"
+          />
+          <p>Remaining characters: <span id="product-name-length"></span></p>
+          <p>
+            <button type="submit">Submit</button>
+          </p>
+        </form>
       </div>
     </main>
     <!-- <script src="/js/main.js"></script> -->
