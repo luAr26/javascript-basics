@@ -38,11 +38,11 @@ secondP.innerText = "The text of this paragraph was changed via JavaScript.";
 const newAnchorEl = document.createElement("a");
 newAnchorEl.href = "http://google.com";
 newAnchorEl.innerText = "google";
-console.dir(newAnchorEl);
+// console.dir(newAnchorEl);
 
 // 2. Get access to the parent element
 const parentElement = document.querySelector(".first");
-console.dir(parentElement);
+// console.dir(parentElement);
 
 // 3. Insert the new element
 parentElement.append(newAnchorEl);
@@ -53,3 +53,10 @@ const firstH1Element = document.querySelector("h1");
 // 2. Remove it!
 // firstH1Element.remove();
 firstH1Element.parentElement.removeChild(firstH1Element);
+
+// Move elements
+const thirdP = document.querySelector(".third");
+const containerEl = thirdP.parentElement;
+// console.dir(secondP);
+// console.dir(thirdP);
+containerEl.insertBefore(thirdP, secondP);
