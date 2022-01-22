@@ -31,5 +31,8 @@ button:hover {
 }
 
 .bg-blue {
-  background-color: blue;
+  background-color: lightblue;
+  /* color: #fff; */
+  padding: 1rem;
+  border-radius: 6px;
 }
