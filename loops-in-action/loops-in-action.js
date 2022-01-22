@@ -49,3 +49,43 @@ const displayUserData = () => {
 };
 
 displayUserDataBtnEl.addEventListener("click", displayUserData);
+
+// Forth example: While loop
+
+const rollDiceBtnEl = document.querySelector("#statistics button");
+
+const rollDice = () => {
+  return Math.floor(Math.random() * 6) + 1;
+};
+
+const deriveNumberOfDiceRolls = () => {
+  const targetNumberInputEl = document.querySelector("#user-target-number");
+  const diceRollsListElement = document.querySelector("#dice-rolls");
+  const enteredNumber = +targetNumberInputEl.value;
+
+  diceRollsListElement.innerHTML = "";
+
+  let hasRolledTargetNumber = false;
+  let numberOfRolls = 0;
+
+  while (!hasRolledTargetNumber) {
+    const rolledNumber = rollDice();
+    // if (rolledNumber === enteredNumber) {
+    //   hasRolledTargetNumber = true;
+    // }
+    numberOfRolls++;
+    const newRollListEl = document.createElement("li");
+    const outputText = `Roll ${numberOfRolls}: ${rolledNumber}`;
+    newRollListEl.innerText = outputText;
+    diceRollsListElement.append(newRollListEl);
+    hasRolledTargetNumber = rolledNumber === enteredNumber;
+  }
+
+  const outputTotalRollsEl = document.querySelector("#output-total-rolls");
+  const outputTargetNumberEl = document.querySelector("#output-target-number");
+
+  outputTotalRollsEl.innerText = numberOfRolls;
+  outputTargetNumberEl.innerText = enteredNumber;
+};
+
+rollDiceBtnEl.addEventListener("click", deriveNumberOfDiceRolls);
