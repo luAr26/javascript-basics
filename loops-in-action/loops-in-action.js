@@ -19,3 +19,16 @@ const calculateSum = () => {
 };
 
 calcSumBtnEl.addEventListener("click", calculateSum);
+
+// Second Example: For-of loop
+const highlightLinksBtnEl = document.querySelector("#highlight-links button");
+
+const highlightLinks = () => {
+  const anchorElements = document.querySelectorAll("#highlight-links a");
+
+  for (const anchorElement of anchorElements) {
+    anchorElement.classList.add("highlight");
+  }
+};
+
+highlightLinksBtnEl.addEventListener("click", highlightLinks);
