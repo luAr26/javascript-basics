@@ -32,3 +32,20 @@ const highlightLinks = () => {
 };
 
 highlightLinksBtnEl.addEventListener("click", highlightLinks);
+
+// Third Example: For-in loop
+const dummyUserData = { firstName: "Max", lastName: "Schwarzmuller", age: 32 };
+const displayUserDataBtnEl = document.querySelector("#user-data button");
+
+const displayUserData = () => {
+  const outputDataEl = document.querySelector("#output-user-data");
+  outputDataEl.innerHTML = "";
+  for (const key in dummyUserData) {
+    const newUserDataListItemEl = document.createElement("li");
+    const outputText = `${key.toUpperCase()}: ${dummyUserData[key]}`;
+    newUserDataListItemEl.innerText = outputText;
+    outputDataEl.append(newUserDataListItemEl);
+  }
+};
+
+displayUserDataBtnEl.addEventListener("click", displayUserData);
